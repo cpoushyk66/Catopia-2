@@ -1,9 +1,9 @@
 import React, { useState, useEffect, createContext } from "react";
 import styled from "styled-components";
 import { Routes, Route, Router } from "react-router-dom";
-import { Logo } from "../styles/Logo";
 import "../App.css"
 import Navbar from "./NavBar";
+import Home from "./Home";
 
 export const UserContext = createContext()
 
@@ -45,7 +45,7 @@ function App() {
             <StyledApp>
                 <Navbar />
                 <Routes>
-                
+                  <Route exact path="/" element={<Home />} />
                 </Routes>
             </StyledApp>
         </UserContext.Provider>

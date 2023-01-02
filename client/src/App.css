@@ -1,7 +1,7 @@
 html, body {
   padding: 0px;
   margin: 0px;
-  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: 'Ultra', serif;
   color: black;
   background-color: #aacd74;
   height: 100%;
@@ -55,4 +55,5 @@ html *::-webkit-scrollbar {
 
 .test {
   background-image: url("../public/assets/images/Hotpot2.png");
+  justify-content: center;
 }

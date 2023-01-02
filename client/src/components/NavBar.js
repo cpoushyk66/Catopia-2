@@ -3,27 +3,25 @@ import styled from "styled-components";
 import { Logo } from "../styles/Logo";
 
 const StyledNavbar = styled.div`
-
-    width: 100%;
-    text-align: center;
+    height: 100%;
+    background-color: grey;
+    width: 10%;
+    position: absolute;
 
 `
 
 const TitleDiv = styled.div`
 
-    width: 100%;
-    height: 50px;
-
-    > h1 {
-        align-self: center;
-        width: 75%;
-        float: right;
-        text-align: center;
+    text-align: center;
+    > p {
+        justify-content: center;
+        font-size: 20px;
+        flex: 4
     }
 
     > img {
+        margin-top: 10px;
     }
-    
 
 `
 
@@ -33,7 +31,7 @@ function Navbar() {
         <StyledNavbar>
             <TitleDiv>
                 <Logo sideLength={50} />
-                <h1>Catopia</h1>
+                <p>Catopia</p>
             </TitleDiv>
 
         </StyledNavbar>
