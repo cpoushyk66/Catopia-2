@@ -56,4 +56,5 @@ html *::-webkit-scrollbar {
 .test {
   background-image: url("../public/assets/images/Hotpot2.png");
   justify-content: center;
+  color: #9b9b9b;
 }

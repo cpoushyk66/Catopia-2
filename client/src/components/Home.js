@@ -4,7 +4,7 @@ import PostsContainer from "./PostsContainer";
 
 const StyledHome = styled.div`
 
-    width: 90%;
+    width: 60%;
     left: 10%;
     height: 100%;
     position: absolute;

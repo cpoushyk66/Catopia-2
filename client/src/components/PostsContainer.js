@@ -4,7 +4,8 @@ import Post from "./Post";
 export default function PostsContainer({posts}) {
 
     function makePosts() {
-        return posts.map(post => <Post post={post} />)
+        let index = 0;
+        return posts.map(post => <Post key={"post" + index++} post={post} />)
     }
 
     return (
