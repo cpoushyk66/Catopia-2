@@ -1,5 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 import Post from "./Post";
+
+const Container = styled.div`
+
+    height: 100%;
+    margin: auto;
+
+`
 
 export default function PostsContainer({posts}) {
 
@@ -9,8 +17,8 @@ export default function PostsContainer({posts}) {
     }
 
     return (
-        <div>
+        <Container>
             {posts != null ? makePosts() : null}
-        </div>
+        </Container>
     )
 }

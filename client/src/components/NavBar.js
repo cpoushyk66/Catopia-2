@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Logo } from "../styles/Logo";
 import ProfilePicture from "../styles/ProfilePicture";

@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   get "/me", to: "users#show"
+
+  #Post Routes
+  get "/top_posts/:range_1/:range_2", to: "posts#top_posts"
 end

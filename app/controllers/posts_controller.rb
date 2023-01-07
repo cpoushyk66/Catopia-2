@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     end
 
     def create
-        post = post.create!(post_params)
+        post = Post.create!(post_params)
         render json: post, status: :created
     end
 
@@ -24,6 +24,16 @@ class PostsController < ApplicationController
     def destroy
         @post.destroy
         head :no_content
+    end
+
+    def top_posts
+        posts = Post.order(likes: :desc)[(params[:range_1].to_i)..(params[:range_2]).to_i]
+
+        if posts != nil
+            render json: posts, status: :ok
+        else
+            render json: {error: "No more posts available."}, status: :not_found
+        end
     end
     
     private

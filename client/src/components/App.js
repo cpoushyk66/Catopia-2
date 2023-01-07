@@ -4,6 +4,7 @@ import { Routes, Route, Router } from "react-router-dom";
 import "../App.css"
 import Navbar from "./NavBar";
 import Home from "./Home";
+import SideBar from "./SideBar";
 
 export const UserContext = createContext()
 
@@ -14,14 +15,9 @@ const StyledApp = styled.div`
 `
 
 function App() {
-
     
   const [user, setUser] = useState(null)
   const [reset, setReset] = useState(false)
-
-  function refresh() {
-    setReset(!reset)
-  }
 
   useEffect(() => {
     fetch("/me")
@@ -37,17 +33,17 @@ function App() {
   const UserContextValue = {
     user: user,
     setUser: setUser,
-    refresh: refresh
   }
 
     return(
         <UserContext.Provider value={UserContextValue} >
-            <StyledApp>
-                <Navbar />
-                <Routes>
-                  <Route exact path="/" element={<Home />} />
-                </Routes>
-            </StyledApp>
+          <StyledApp>
+              <Navbar />
+              <Routes>
+                <Route exact path="/" element={<Home />} />
+              </Routes>
+              <SideBar />
+          </StyledApp>
         </UserContext.Provider>
     )
 }
