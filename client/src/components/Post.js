@@ -8,9 +8,11 @@ const StyledPost = styled.div`
 
     margin: auto;
 
-    background-color: purple;
+    background-color: #0b5a34;
+
+    color: white;
+    border: 2px black solid;
     
-    border-radius: 15px;
 
     > img {
         max-width: 33%;

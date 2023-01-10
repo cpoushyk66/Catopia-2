@@ -8,6 +8,7 @@ const StyledHome = styled.div`
     left: 10%;
     height: 100%;
     position: absolute;
+    
 
 `
 export default function Home() {

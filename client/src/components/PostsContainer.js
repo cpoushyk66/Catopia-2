@@ -4,7 +4,8 @@ import Post from "./Post";
 
 const Container = styled.div`
 
-    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
     margin: auto;
 
 `

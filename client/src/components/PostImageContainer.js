@@ -12,9 +12,6 @@ const Container = styled.div`
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-
 
     > img {
         max-height: 150px;

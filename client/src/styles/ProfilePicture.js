@@ -27,7 +27,7 @@ export default function ProfilePicture({sideLength}) {
         <StyledImg width={`${sideLength} px`} height={`${sideLength} px`} src={userContext.user.image} />
         :
         <div>
-            <StyledImg width={`${sideLength} px`} height={`${sideLength} px`} src="https://www.pngall.com/wp-content/uploads/2/Question-Mark-PNG-Picture.png" onClick={updateLoginForm}/>
+            <StyledImg width={`${sideLength} px`} height={`${sideLength} px`} src="https://uploads-ssl.webflow.com/62d99027d024401a75e5a091/6307b14a6dbfb3ffc2163ebf_Purrr.gif" onClick={updateLoginForm}/>
             
             {loginForm ? <LoginBox/> : null}
 

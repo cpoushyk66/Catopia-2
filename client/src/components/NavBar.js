@@ -5,7 +5,8 @@ import ProfilePicture from "../styles/ProfilePicture";
 
 const StyledNavbar = styled.div`
     height: 100%;
-    background-color: grey;
+    background: rgb(81,170,93);
+    background: linear-gradient(90deg, rgba(81,170,93,1) 90%, rgba(0,173,46,1) 95%, rgba(2,0,36,1) 100%);
     width: 10%;
     position: absolute;
     text-align: center;

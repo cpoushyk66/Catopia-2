@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :follower_links
   resources :post_pictures
   resources :posts
   resources :users, only: [:index, :create, :update, :destroy]
@@ -15,4 +16,8 @@ Rails.application.routes.draw do
 
   #Post Routes
   get "/top_posts/:range_1/:range_2", to: "posts#top_posts"
+
+  #User Routes
+  get "/top_users/:range_1/:range_2", to: "users#top_users"
+
 end

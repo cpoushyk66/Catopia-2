@@ -32,6 +32,16 @@ class UsersController < ApplicationController
         @user.destroy
         head :no_content
     end
+
+    def top_users
+        users = User.top_users[(params[:range_1].to_i)..(params[:range_2]).to_i]
+
+        if users != nil
+            render json: users, status: :ok
+        else
+            render json: {error: "No more users available."}, status: :not_found
+        end
+    end
     
     private
 
