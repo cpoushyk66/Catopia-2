@@ -10,11 +10,20 @@ const Container = styled.div`
 
 `
 
-export default function PostsContainer({posts}) {
+export default function PostsContainer({posts, setPosts}) {
 
     function makePosts() {
         let index = 0;
-        return posts.map(post => <Post key={"post" + index++} post={post} />)
+        return posts.map(post => <Post key={"post" + index++} post={post} updatePost={updatePost}/>)
+    }
+
+    function updatePost(newPost) {
+        setPosts(posts.map(post => {
+            if (post.id != newPost.id) {
+                return post
+            }
+            return newPost
+        }))
     }
 
     return (

@@ -4,11 +4,11 @@ class PostsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
     def index
-        render json: Post.all, status: :ok
+        render json: Post.all, user_id: session[:user_id], status: :ok
     end
 
     def show
-        render json: @post, status: :ok
+        render json: @post, user_id: session[:user_id], status: :ok
     end
 
     def create

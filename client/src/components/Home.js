@@ -26,7 +26,7 @@ export default function Home() {
 
     return (
         <StyledHome>
-            <PostsContainer posts={posts} />
+            <PostsContainer posts={posts} setPosts={setPosts}/>
         </StyledHome>
     )
 }

@@ -60,7 +60,7 @@ export default function SideBar() {
     function renderContent() {
 
         if (topWhat == "posts") {
-            return <PostsContainer posts={topPosts} />
+            return <PostsContainer posts={topPosts} setPosts={setTopPosts}/>
         }
         else if (topWhat == "users") {
             return <UserContainer users={topUsers} />
