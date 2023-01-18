@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
+import { UserContext } from "./App";
 import PostImageContainer from "./PostImageContainer";
 
 const StyledPost = styled.div`
@@ -31,9 +32,11 @@ const StyledPost = styled.div`
 
 export default function Post({post, updatePost}) {
 
+    const userContext = useContext(UserContext)
+
     function updateLike() {
         if (post.is_liked) {
-            fetch(`/likes/${post.id}`, {
+            fetch(`/likes/${userContext.user.id}/${post.id}`, {
                 method: "DELETE"
             })
             updatePost({...post, is_liked: false, likes: post.likes - 1})
@@ -43,14 +46,13 @@ export default function Post({post, updatePost}) {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
-                    ...post,
-                    is_liked: !post.is_liked,
-                    likes: post.is_liked ? (post.likes - 1) : (post.likes + 1)
+                    user_id: userContext.user.id,
+                    post_id: post.id
                 })
             })
             .then(res => {
                 if (res.ok) {
-                    res.json().then(updatePost)
+                    updatePost({...post, is_liked: true, likes: post.likes + 1})
                 }
             })
         }

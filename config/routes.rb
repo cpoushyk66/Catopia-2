@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :likes
+  resources :likes, only: [:index, :create, :update]
   resources :follower_links
   resources :post_pictures
   resources :posts
@@ -21,4 +21,7 @@ Rails.application.routes.draw do
   #User Routes
   get "/top_users/:range_1/:range_2", to: "users#top_users"
 
+  #Likes Routes
+  get "/likes/:post_id/:user_id", to: "likes#show"
+  delete "/likes/:post_id/:user_id", to: "likes#destroy"
 end

@@ -1,5 +1,5 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :user, :header, :content, :likes, :is_liked
+  attributes :id, :user, :header, :content, :likes, :is_liked
 
   has_many :post_pictures
 

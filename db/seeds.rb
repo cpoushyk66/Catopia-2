@@ -48,14 +48,14 @@ fl7 = FollowerLink.create(followed_id: u4.id, follower_id: u1.id)
 puts "Seeded #{FollowerLink.count} FollowerLinks"
 
 puts 'Post Seeding'
-p1 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.", likes: 20)
+p1 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.")
 
-p2 = Post.create(user_id: u1.id, header: "Test Post with Cat Pictures", content: "Nevermind, it was just my phone. Here's the pics...", likes: 27)
+p2 = Post.create(user_id: u1.id, header: "Test Post with Cat Pictures", content: "Nevermind, it was just my phone. Here's the pics...")
 p2_pic_1 = PostPicture.create(post_id: p2.id, picture_url: "https://i.ytimg.com/vi/NEV6wHUYwr8/maxresdefault.jpg")
 p2_pic_2 = PostPicture.create(post_id: p2.id, picture_url: "https://i.ytimg.com/vi/NEV6wHUYwr8/maxresdefault.jpg")
 p2_pic_3 = PostPicture.create(post_id: p2.id, picture_url: "https://i.ytimg.com/vi/NEV6wHUYwr8/maxresdefault.jpg")
 
-p3 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.", likes: 20)
-p4 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.", likes: 20)
-p5 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.", likes: 20)
-p6 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.", likes: 20)
+p3 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.")
+p4 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.")
+p5 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.")
+p6 = Post.create(user_id: u1.id, header: "Test Post without Cat Picture", content: "Random cat info about non existent cat in my bedroom mirror I see twice a week unless it's a leap year and then it becomes a daily occurance.")

@@ -12,7 +12,7 @@ class LikesController < ApplicationController
     end
 
     def create
-        if (Like.where("user_id = ? AND post_id = ?", like_params[:user_id].to_i, like_params[:post_id].to_i).length == 0)
+        if (Like.where("user_id = ? AND post_id = ?", like_params[:user_id], like_params[:post_id]).length == 0)
             like = Like.create!(like_params)
             render json: like, status: :created
         else 
@@ -33,7 +33,7 @@ class LikesController < ApplicationController
     private
 
     def set_like
-        @like = Like.find("user_id = ? AND post_id = ?", session[:user_id], params[:id])
+        @like = Like.where("user_id = ? AND post_id = ?", params[:user_id], params[:post_id]).take!
     end
 
     def like_params
